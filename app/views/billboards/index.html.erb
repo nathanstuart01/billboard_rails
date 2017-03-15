@@ -1,0 +1,16 @@
+
+<h1>Top Billboard Charts:</h1>
+<table>
+  <thead>
+  <th>Chart Name</th>
+  </thead>
+    <tbody>
+      <% @billboards.each do |billboard| %>
+        <tr>
+          <td> <%= billboard.chart_name %> <%= link_to 'Songs', billboard_songs_path(billboard) %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br />
+  <%= link_to 'New Chart', new_billboard_path %>

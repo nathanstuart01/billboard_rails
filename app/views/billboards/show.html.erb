@@ -1,0 +1,7 @@
+<h1>Current Chart</h1>
+
+<h3><%= @billboard.chart_name %></h3>
+
+<div><%= link_to 'Edit Chart', edit_billboard_path(@billboard) %></div>
+<div><%= link_to 'Delete Chart', billboard_path(@billboard), method: :delete %></div>
+<div><%= link_to 'Home', :root %></div>

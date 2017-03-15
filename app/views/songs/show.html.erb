@@ -1,0 +1,15 @@
+<h1>Current Song Added</h1>
+
+
+<h3>Song: <%= @song.song_name %> by <%= @song.artist_name %></h3>
+
+<div>
+  <%= link_to 'Edit Song and Artist Name', edit_billboard_song_path(@billboard, @song) %>
+  <%= link_to 'Delete Song and Artist', billboard_song_path(@billboard, @song), method: :delete %>
+</div
+
+<div>
+  <h4>Back to Home Links</h4>
+    <%= link_to 'Billboards Home', root_path %>
+    <%= link_to 'Song List Home', billboard_songs_path %>
+</div>

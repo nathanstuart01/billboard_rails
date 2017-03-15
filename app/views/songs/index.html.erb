@@ -1,0 +1,17 @@
+<h1>All Songs For: <%= @billboard.chart_name %> </h1>
+<table>
+  <thead>
+    <th>List of Songs</th>
+  </thead>
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td> <%= song.song_name %> <%= link_to 'Artist Info', billboard_artists_path(@billboard)%> </td>
+
+        </tr>
+        <% end %>
+      </tbody>
+  </table>
+
+
+<%= link_to 'Back to Chart List', root_path %>
